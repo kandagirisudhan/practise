@@ -25,9 +25,6 @@ public class ExpandingExpressionUsingSingleStack {
             } else if (']' == ch) {
                 int prevCount = (int) stack.pop();
                 String prevString = (String) stack.pop();
-//                System.out.println(prevString);
-//                System.out.println(prevCount);
-
                 StringBuilder repeatedOccuranceString = new StringBuilder();
                 for (int i = 0; i < prevCount; i++) {
                     repeatedOccuranceString.append(currentString);
