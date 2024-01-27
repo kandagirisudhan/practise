@@ -3,7 +3,7 @@ package org.example.basic.Expression;
 import java.util.Objects;
 import java.util.Stack;
 
-public class expandingExpressionUsingSingleStack {
+public class ExpandingExpressionUsingSingleStack {
 
     public static String expandExpression(String inputString) {
         Stack<Object> stack = new Stack<>();
