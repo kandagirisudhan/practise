@@ -25,7 +25,7 @@ public class LinearAndBinary {
         int last = inputArray.size()-1;
         System.out.println(last);
         while (start <= last) {
-            mid = start +(last -start)/2;  // start +(last -start)/2
+            mid = start +(last -start)/2;  //(or) (start+last)/2
 //            System.out.println("----------->" + inputArray.get(mid));
             if (inputArray.get(mid) == x) {
                 return mid+1;
