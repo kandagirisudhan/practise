@@ -30,8 +30,13 @@ public class Difference {
     private static int DifferenceInput(int[] a, int diff) {
         int count = 0;
         Set<Integer> removeDuplicate = new HashSet<>();
+
+
         for (int i = 0; i < a.length; i++) {
             removeDuplicate.add(a[i]);
+        }
+        if(removeDuplicate.size() < 2){
+            System.out.println("Invalid input to find difference");
         }
         System.out.println("------>" + removeDuplicate);
         List<Integer> inputList = removeDuplicate.stream().collect(Collectors.toList());
