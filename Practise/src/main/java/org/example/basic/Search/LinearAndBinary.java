@@ -1,6 +1,5 @@
 package org.example.basic.Search;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,6 +21,7 @@ public class LinearAndBinary {
         System.out.println(inputArray);
         int mid = 0;
         int start = 0;
+        System.out.println("length "+inputArray.size());
         int last = inputArray.size()-1;
         System.out.println(last);
         while (start <= last) {
