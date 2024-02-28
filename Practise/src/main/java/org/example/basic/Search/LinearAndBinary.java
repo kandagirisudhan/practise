@@ -12,7 +12,7 @@ public class LinearAndBinary {
         int resultLinear = linearSearch(inputArray, x);
         System.out.println("Found in the location :" + resultLinear);
         inputArray = inputArray.stream().sorted().collect(Collectors.toList());
-        int resultBinary = binarySearch(inputArray, x);
+        int resultBinary =  binarySearch(inputArray, x);
         System.out.println("Found in the location :" +resultBinary);
     }
 
@@ -30,12 +30,11 @@ public class LinearAndBinary {
             if (inputArray.get(mid) == x) {
                 return mid+1;
             }
-            if (x > inputArray.get(mid)) { // given element x greater than mid ,element will be in the right sub array
+            if (x > inputArray.get(mid)) {  // given element x greater than mid ,element will be in the right sub array
                 start = mid + 1;
             } else {
                 last = mid - 1; //given element x lesser than mid ,element will be in the left sub array
             }
-
         }
         return -1;
     }
@@ -44,7 +43,6 @@ public class LinearAndBinary {
         for (int i = 0; i < inputArray.size(); i++) {
             if (inputArray.get(i) == x) {
                 return i + 1;
-
             }
         }
         return 0;

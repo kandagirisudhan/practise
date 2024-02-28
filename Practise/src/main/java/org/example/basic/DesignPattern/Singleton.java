@@ -7,7 +7,6 @@ public class Singleton {
     static Singleton getInstance() {
         if (val == null) {
             val = new Singleton();
-
         }
         return val;
     }

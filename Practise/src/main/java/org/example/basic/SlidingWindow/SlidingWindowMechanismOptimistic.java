@@ -28,7 +28,7 @@ public class SlidingWindowMechanismOptimistic {
             // current window.
             int window_sum = max_sum;
             for (int i = k; i < n; i++) {
-                window_sum += arr[i] - arr[i - k];
+                window_sum += arr[i] - arr[i - k];//18+20-
                 max_sum = Math.max(max_sum, window_sum);
             }
 
