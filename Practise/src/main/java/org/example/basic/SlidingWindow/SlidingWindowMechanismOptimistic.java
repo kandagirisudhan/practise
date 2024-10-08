@@ -27,9 +27,12 @@ public class SlidingWindowMechanismOptimistic {
             // window and adding last element of
             // current window.
             int window_sum = max_sum;
-            for (int i = k; i < n; i++) {
-                window_sum += arr[i] - arr[i - k];//18+20-
+            for (int i = k; i < n; i++) { // starting from K element then increment i
+//                System.out.println("window_sum:"+window_sum);
+                window_sum += arr[i] - arr[i - k];//18+20
+                System.out.println("window_sum:"+window_sum+ " arr[i]:"+arr[i]+" arr[i-k]"+arr[i-k]);
                 max_sum = Math.max(max_sum, window_sum);
+                System.out.println("max_sum:"+max_sum);
             }
 
             return max_sum;
@@ -43,6 +46,11 @@ public class SlidingWindowMechanismOptimistic {
             int n = arr.length;
             System.out.println(maxSum(arr, n, k));
         }
+//1+4+2+10=17
+//    17+2-1=18
+//    18+3-4=17
+//    18+
+
 
 
 // This code is contributed

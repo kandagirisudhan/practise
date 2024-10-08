@@ -36,10 +36,14 @@ public class Occurrences {
         System.out.println("------Duplicate elements Val---->" + uniqueval);
         Set<Character> setVal= inputList.stream().filter(p-> !p.toString().trim().isEmpty()).collect(Collectors.toSet());
         List<Character> sortList= setVal.stream().sorted().collect(Collectors.toList());
+
         System.out.println("------Remove Duplicate--------"+sortList);
 
         List<Character> setValList= inputList.stream().filter(p-> !p.toString().trim().isEmpty()).distinct().sorted().collect(Collectors.toList());
         System.out.println("------Remove Duplicate--------"+setValList);
 
     }
+
+
+
 }
