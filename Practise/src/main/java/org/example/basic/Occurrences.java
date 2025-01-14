@@ -31,7 +31,7 @@ public class Occurrences {
         System.out.println("------To find Unique elements ----->" + resultUniqueList);
 
         Set<Character> UniqueElement =new HashSet<>();
-        List<Character> uniqueval=inputList.stream().filter(p -> !UniqueElement.add(p)).collect(Collectors.toList());
+        List<Character> uniqueval=inputList.stream().filter(p-> !p.toString().trim().isEmpty()).filter(p -> !UniqueElement.add(p)).collect(Collectors.toList());
 
         System.out.println("------Duplicate elements Val---->" + uniqueval);
         Set<Character> setVal= inputList.stream().filter(p-> !p.toString().trim().isEmpty()).collect(Collectors.toSet());
@@ -42,6 +42,8 @@ public class Occurrences {
         List<Character> setValList= inputList.stream().filter(p-> !p.toString().trim().isEmpty()).distinct().sorted().collect(Collectors.toList());
         System.out.println("------Remove Duplicate--------"+setValList);
 
+        List<Character> charVal=inputList.stream().filter(e->!e.toString().trim().isEmpty()).distinct().collect(Collectors.toList());
+        System.out.println(charVal);
     }
 
 
